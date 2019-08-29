@@ -1,0 +1,37 @@
+Name:		qubes-remote-desktop
+Version:	@VERSION@
+Release:	1%{?dist}
+Summary:	QubesOS configuration files for VNC
+License:	GPL-2+
+
+Source0:	%{name}-%{version}.tar.gz
+
+Requires:	tigervnc-server
+
+%description
+QubesOS configuration files for VNC
+
+%prep
+%setup -q
+
+%install
+rm -rf $RPM_BUILD_ROOT
+make install-common DESTDIR=$RPM_BUILD_ROOT
+
+%clean
+rm -rf $RPM_BUILD_ROOT
+
+%post
+systemctl daemon-reload
+
+%preun
+systemctl stop qubes-vncserver* >/dev/null 2>&1
+systemctl daemon-reload
+
+%files
+%defattr(-,root,root,-)
+/usr/lib/qubes/qubes-vnc-xstartup
+/lib/systemd/system/qubes-vncserver@.service
+
+%changelog
+@CHANGELOG@

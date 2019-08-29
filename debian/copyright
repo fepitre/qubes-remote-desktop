@@ -1,0 +1,7 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: qubes-remote-desktop
+Source: <http://www.qubes-os.org/>
+
+Files: *
+Copyright: 2019 Frédéric Pierret <frederic.pierret@qubes-os.org>
+License: GPL-2+

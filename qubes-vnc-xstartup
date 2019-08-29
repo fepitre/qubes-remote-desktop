@@ -1,0 +1,17 @@
+#!/bin/bash
+# Qubes Remote Desktop VNC xstartup script
+[ -r $HOME/.Xresources ] && xrdb $HOME/.Xresources
+
+XFCE_SESSION="$(type -p startxfce4)"
+GNOME_SESSION="$(type -p gnome-session)"
+
+# Try to open a XFCE session (e.g. default dom0 session)
+# else, try to open GNOME session (e.g. default domU session)
+# else, fallback to system xinitrc.
+if [ -n "$XFCE_SESSION" ]; then
+    exec "$XFCE_SESSION"
+elif [ -n "$GNOME_SESSION" ]; then
+    exec "$GNOME_SESSION"
+elif [ -e /etc/X11/xinit/xinitrc ]; then
+    exec /etc/X11/xinit/xinitrc
+fi

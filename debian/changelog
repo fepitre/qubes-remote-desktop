@@ -1,0 +1,5 @@
+qubes-remote-desktop (4.0.0-1) unstable; urgency=medium
+
+  * Initial commit.
+
+ -- Frédéric Pierret <frederic.pierret@qubes-os.org>  Tue, 29 Aug 2019 17:19:00 +0200

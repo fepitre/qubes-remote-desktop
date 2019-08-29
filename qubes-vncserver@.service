@@ -1,0 +1,18 @@
+[Unit]
+Description=Start Qubes Remote Desktop VNC server at startup
+After=syslog.target network.target
+
+[Service]
+Type=forking
+User=%i
+Group=%i
+WorkingDirectory=/home/%i
+
+PIDFile=/home/%i/.vnc/%H:1.pid
+ExecStartPre=-/usr/bin/vncserver -kill :1 > /dev/null 2>&1
+ExecStartPre=/usr/bin/install -Dm 750 -o %i -g %i /usr/lib/qubes/qubes-vnc-xstartup /home/%i/.vnc/xstartup
+ExecStart=/usr/bin/vncserver :1 -depth 24 -geometry 1280x800 -SecurityTypes=None
+ExecStop=/usr/bin/vncserver -kill :1
+
+[Install]
+WantedBy=multi-%i.target

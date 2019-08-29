@@ -1,0 +1,11 @@
+Source: qubes-remote-desktop
+Section: admin
+Priority: optional
+Maintainer: Frédéric Pierret <frederic.pierret@qubes-os.org>
+Standards-Version: 3.9.8
+Build-Depends: debhelper (>= 9~), quilt
+
+Package: qubes-remote-desktop
+Architecture: any
+Depends: tigervnc-server
+Description: QubesOS configuration files for VNC.
