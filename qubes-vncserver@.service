@@ -15,4 +15,4 @@ ExecStart=/usr/bin/vncserver :1 -depth 24 -geometry 1280x800 -SecurityTypes=None
 ExecStop=/usr/bin/vncserver -kill :1
 
 [Install]
-WantedBy=multi-%i.target
+WantedBy=multi-user.target
