@@ -1,3 +1,13 @@
+qubes-remote-desktop (4.0.2-1) unstable; urgency=medium
+
+  * travis: add configuration
+  * debian: fix tigervnc server dependency
+  * version 4.0.1
+  * Update README
+  * Fix mistake in systemd service
+
+ -- Frédéric Pierret (fepitre) <frederic.pierret@qubes-os.org>  Sun, 29 Sep 2019 19:29:36 +0200
+
 qubes-remote-desktop (4.0.1-1) unstable; urgency=medium
 
   * travis: add configuration
