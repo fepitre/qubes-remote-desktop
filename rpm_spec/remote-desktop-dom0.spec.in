@@ -16,7 +16,7 @@ QubesOS configuration files for VNC
 
 %install
 rm -rf $RPM_BUILD_ROOT
-make install-common DESTDIR=$RPM_BUILD_ROOT
+make install-dom0 DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -30,7 +30,6 @@ systemctl daemon-reload
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/qubes/qubes-vnc-xstartup
 /lib/systemd/system/qubes-vncserver@.service
 
 %changelog

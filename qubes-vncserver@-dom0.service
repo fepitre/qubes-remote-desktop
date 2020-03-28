@@ -1,0 +1,14 @@
+[Unit]
+Description=Start Qubes Remote Desktop VNC server at startup
+After=syslog.target network.target
+
+[Service]
+User=%i
+Group=%i
+WorkingDirectory=/home/%i
+
+PIDFile=/home/%i/.vnc/%H:0.pid
+ExecStart=/usr/bin/x0vncserver -passwordfile=/home/%i/.vnc/passwd -display :0
+
+[Install]
+WantedBy=multi-user.target
