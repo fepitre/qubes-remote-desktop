@@ -1,3 +1,11 @@
+qubes-remote-desktop (4.0.3-1) unstable; urgency=medium
+
+  * dom0: bind vncserver to DISPLAY=:0
+  * Update travis
+  * Merge dom0 and VM services:
+
+ -- Frédéric Pierret (fepitre) <frederic.pierret@qubes-os.org>  Sun, 24 May 2020 09:32:57 +0200
+
 qubes-remote-desktop (4.0.2-1) unstable; urgency=medium
 
   * travis: add configuration
