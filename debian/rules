@@ -13,7 +13,7 @@ export DESTDIR=$(shell readlink -m .)/debian/tmp
 	dh $@
 
 override_dh_auto_install:
-	make install-vm
+	make install
 
 override_dh_install:
 	dh_install --fail-missing

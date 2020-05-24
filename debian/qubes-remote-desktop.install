@@ -1,3 +1,5 @@
 usr/lib/qubes/qubes-vnc-xstartup
 etc/systemd/system/qubes-vncserver@.service.d/30_qubes.conf
 lib/systemd/system/qubes-vncserver@.service
+etc/systemd/system/qubes-x0vncserver@.service.d/30_qubes.conf
+lib/systemd/system/qubes-x0vncserver@.service
