@@ -1,3 +1,5 @@
+TEST
+
 # qubes-remote-desktop
 
 SystemD service for creating VNC server session in dom0 or any qube.
